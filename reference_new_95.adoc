@@ -154,7 +154,7 @@ NOTE: NetApp Volume Encryption is a different encryption technology than Cloud V
 
 Two features are no longer supported in the 9.5 release.
 
-==== Cloud Volumes ONTAP encryption is no longer supported in AWS
+==== NetApp onboard key management no longer supported in Cloud Volumes ONTAP in AWS
 
 Data-at-rest encryption of aggregates using external key managers is no longer supported. If you are currently using this feature and you want to upgrade, you must launch a new 9.5 system and then https://docs.netapp.com/us-en/occm/task_replicating_data.html[replicate data] to that system.
 
