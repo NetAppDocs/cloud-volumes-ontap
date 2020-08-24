@@ -8,7 +8,9 @@ before_install:
 - echo -e "machine github.com\n login $GH_TOKEN" > ~/.netrc && chmod 600 ~/.netrc
 - git submodule add https://github.com/NetAppDocs/jekyll dependencies/jekyll
 - gem update --system && gem install bundler && gem update bundler
-- echo "DEBUG: $TRAVIS_BRANCH | $TRAVIS_PULL_REQUEST | $TRAVIS_PULL_REQUEST_BRANCH"
+- echo $TRAVIS_BRANCH
+- echo $TRAVIS_PULL_REQUEST
+- echo $TRAVIS_PULL_REQUEST_BRANCH
 - if [[ "$TRAVIS_BRANCH" =~ master && $TRAVIS_PULL_REQUEST -eq 0 && -z "$TRAVIS_PULL_REQUEST_BRANCH" ]]; then
   echo "Site Translation Enabled";
   else
